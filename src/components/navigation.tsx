@@ -53,11 +53,11 @@ export function Navigation({ language, onLanguageChange }: NavigationProps) {
                   <button
                     key={key}
                     onClick={() => scrollToSection(key)}
-                    className="group relative text-sm font-medium text-gray-300 transition-colors duration-300 hover:text-[#0D52FF]"
+                    className="group hover:text-brand relative text-sm font-medium text-gray-300 transition-colors duration-300"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     {item}
-                    <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-[#0D52FF] transition-all duration-300 group-hover:w-full"></span>
+                    <span className="bg-brand absolute -bottom-1 left-0 h-0.5 w-0 transition-all duration-300 group-hover:w-full"></span>
                   </button>
                 )
               )}
@@ -65,12 +65,11 @@ export function Navigation({ language, onLanguageChange }: NavigationProps) {
 
             <div className="animate-slide-in-right flex items-center space-x-2">
               <Button
-                variant="ghost"
                 size="sm"
                 onClick={() =>
                   onLanguageChange(language === 'pt' ? 'en' : 'pt')
                 }
-                className="text-white transition-all duration-300 hover:bg-white/10 hover:text-[#0D52FF]"
+                className="bg-transparent text-white transition-all duration-300 hover:bg-white/10 hover:text-brand"
               >
                 <Globe className="h-4 w-4" />
                 <span className="ml-2 text-sm">{language.toUpperCase()}</span>
@@ -78,10 +77,9 @@ export function Navigation({ language, onLanguageChange }: NavigationProps) {
 
               {/* Mobile Menu Button */}
               <Button
-                variant="ghost"
                 size="sm"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="text-white hover:bg-white/10 hover:text-[#0D52FF] md:hidden"
+                className="text-white hover:bg-white/10 hover:text-brand md:hidden"
               >
                 {isMobileMenuOpen ? (
                   <X className="h-5 w-5" />
@@ -107,7 +105,7 @@ export function Navigation({ language, onLanguageChange }: NavigationProps) {
                   <button
                     key={key}
                     onClick={() => scrollToSection(key)}
-                    className="animate-slide-up py-2 text-left text-lg font-medium text-white transition-colors duration-300 hover:text-[#0D52FF]"
+                    className="animate-slide-up py-2 text-left text-lg font-medium text-white transition-colors duration-300 hover:text-brand"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     {item}
