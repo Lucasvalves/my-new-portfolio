@@ -123,7 +123,7 @@ export function HeroSection({ language }: HeroSectionProps) {
               </Button>
             </Link>
             <Link
-              href="https://drive.google.com/file/d/1c4wa4UYKlneB2jdYw3ncEl5-diP0IW2J/view?usp=sharing"
+              href={translation.hero.linkToCV}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -153,7 +153,7 @@ export function HeroSection({ language }: HeroSectionProps) {
                 <Button
                   key={index}
                   size="sm"
-                  className="hover-lift  bg-transparent hover:text-brand text-gray-400 transition-all duration-300 hover:bg-white/10"
+                  className="hover-lift hover:text-brand bg-transparent text-gray-400 transition-all duration-300 hover:bg-white/10"
                   asChild
                 >
                   <Link href={href} target="_blank" rel="noopener noreferrer">
@@ -171,7 +171,7 @@ export function HeroSection({ language }: HeroSectionProps) {
           <div className="group relative">
             <div className="animate-float relative h-80 w-80 overflow-hidden rounded-full">
               <Image
-                src="/profile.png"
+                src="/profile.jpeg"
                 alt="Lucas Veloso"
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 fill

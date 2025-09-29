@@ -15,7 +15,9 @@ const pt = {
     stackTitle: 'STACK PRINCIPAL',
     contactButton: 'Entre em contato',
     downloadCV: 'Download CV',
-    connectText: 'Conecte-se:'
+    connectText: 'Conecte-se:',
+    linkToCV:
+      'https://drive.google.com/file/d/1c4wa4UYKlneB2jdYw3ncEl5-diP0IW2J/view?usp=sharing'
   },
   about: {
     aboutTitle: 'Sobre Mim',

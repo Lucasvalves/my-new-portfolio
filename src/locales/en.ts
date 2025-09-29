@@ -15,7 +15,9 @@ const en = {
     stackTitle: 'MAIN STACK',
     contactButton: 'Get in touch',
     downloadCV: 'Download CV',
-    connectText: 'Connect:'
+    connectText: 'Connect:',
+    linkToCV:
+      'https://drive.google.com/file/d/1772THsT12qkUK5rysIVSiaYnxNEMATOt/view?usp=sharing'
   },
   about: {
     aboutTitle: 'About Me',
