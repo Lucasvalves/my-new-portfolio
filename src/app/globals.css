@@ -55,7 +55,8 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border); --color-input: var(--input);
+  --color-border: var(--border);
+  --color-input: var(--input);
   --color-ring: var(--ring);
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
@@ -140,6 +141,29 @@
     background: #111111;
     border-radius: inherit;
   }
+  .differentials-border {
+    border: 1px solid transparent;
+    background: #21212124;
+    border-radius: 10px;
+  }
+  .differentials-border:hover {
+    border: solid 1px #0d52ff;
+  }
+
+  .black-border {
+    position: relative;
+    background: linear-gradient(45deg, #0d52ff, #1a73e8, #0d52ff);
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease infinite;
+  }
+
+  .black-border::before {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    background: #000000;
+    border-radius: inherit;
+  }
 
   .hover-lift {
     transition:
@@ -167,6 +191,21 @@
 
   .section-darker {
     background: #000000;
+  }
+}
+
+.zoom-in:hover {
+  animation: zoomIn 0.9s ease-out forwards;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 

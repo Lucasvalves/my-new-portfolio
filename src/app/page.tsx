@@ -1,5 +1,6 @@
 'use client'
 
+import { AboutSection } from '@/components/about-section'
 import { HeroSection } from '@/components/hero-section'
 import { Navigation } from '@/components/navigation'
 import { Language } from '@/locales'
@@ -12,6 +13,7 @@ export default function Home() {
     <main className="min-h-screen scroll-smooth">
       <Navigation language={language} onLanguageChange={setLanguage} />
       <HeroSection language={language} />
+      <AboutSection language={language}></AboutSection>
     </main>
   )
 }
