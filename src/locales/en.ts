@@ -47,6 +47,21 @@ const en = {
     adaptabilityValue: 'Adaptability',
     descriptionAdaptabilityValue:
       'Flexibility to quickly adjust to new demands, scope changes, and diverse technological contexts.'
+  },
+  skills: {
+    skillsTitle: 'Technical Skills',
+    developmentTitle: 'Development',
+    technologiesTitle: 'Technologies and Tools',
+    methodologiesTitle: 'Methodologies'
+  },
+  educations: {
+    educationTitle: 'Education',
+    bachelorDegree: 'Bachelor in Information Systems',
+    university: 'Salvador University',
+    bachelorPeriod: '07/2022 - 06/2026',
+    technicalDegree: 'Technical in Systems Development',
+    senai: 'SENAI',
+    technicalPeriod: '07/2021 - 12/2022'
   }
 }
 

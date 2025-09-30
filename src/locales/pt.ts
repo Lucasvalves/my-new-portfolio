@@ -48,6 +48,21 @@ const pt = {
     adaptabilityValue: 'Adaptabilidade',
     descriptionAdaptabilityValue:
       'Flexibilidade para se ajustar rapidamente a novas demandas, mudanças de escopo e diferentes contextos tecnológicos.'
+  },
+  skills: {
+    skillsTitle: 'Competências Técnicas',
+    developmentTitle: 'Desenvolvimento',
+    technologiesTitle: 'Tecnologias e Ferramentas',
+    methodologiesTitle: 'Metodologias'
+  },
+  educations: {
+    educationTitle: 'Formação',
+    bachelorDegree: 'Bacharelado em Sistemas de Informação',
+    university: 'Universidade Salvador',
+    bachelorPeriod: '07/2022 - 06/2026',
+    technicalDegree: 'Técnico em Desenvolvimento de Sistemas',
+    senai: 'SENAI',
+    technicalPeriod: '07/2021 - 12/2022'
   }
 }
 
