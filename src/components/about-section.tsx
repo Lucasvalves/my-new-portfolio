@@ -68,27 +68,27 @@ export function AboutSection({ language }: AboutSectionProps) {
   const keyStrengths = [
     {
       keyStrength: translation.about.performanceValue,
-      icon: <Zap className="relative z-10" size={15} />,
+      icon: Zap,
       descripiton: translation.about.descriptionPerformanceValue
     },
     {
       keyStrength: translation.about.innovationValue,
-      icon: <Lightbulb className="relative z-10" size={15} />,
+      icon: Lightbulb,
       descripiton: translation.about.descriptionInnovationValue
     },
     {
       keyStrength: translation.about.problemSolvingValue,
-      icon: <Puzzle className="relative z-10" size={15} />,
+      icon: Puzzle,
       descripiton: translation.about.descriptionProblemSolvingValue
     },
     {
       keyStrength: translation.about.proactivityValue,
-      icon: <Rocket className="relative z-10" size={15} />,
+      icon: Rocket,
       descripiton: translation.about.descriptionProactivityValue
     },
     {
       keyStrength: translation.about.adaptabilityValue,
-      icon: <RefreshCw className="relative z-10" size={15} />,
+      icon: RefreshCw,
       descripiton: translation.about.descriptionAdaptabilityValue
     }
   ]
@@ -142,7 +142,7 @@ export function AboutSection({ language }: AboutSectionProps) {
                 {translation.about.aboutDescription3}
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-8 mt-20">
+            <div className="mt-20 grid grid-cols-2 gap-8">
               <div className="group hover-lift text-center">
                 <div className="animate-pulse-glow text-brand mb-2 text-4xl font-bold lg:text-5xl">
                   {counters.years}+
@@ -180,7 +180,7 @@ export function AboutSection({ language }: AboutSectionProps) {
                 >
                   <div className="flex gap-2.5">
                     <span className="black-border zoom-in text-brand z10 relative mb-7 cursor-default rounded-md p-2 text-sm font-normal">
-                      {value.icon}
+                      <value.icon className="relative z-10" size={15} />
                     </span>
                     <span className="relative">
                       {value.keyStrength}
