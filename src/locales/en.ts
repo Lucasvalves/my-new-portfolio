@@ -48,6 +48,37 @@ const en = {
     descriptionAdaptabilityValue:
       'Flexibility to quickly adjust to new demands, scope changes, and diverse technological contexts.'
   },
+  experience: {
+    experienceTitle: 'Experience',
+    athan: {
+      athanPosition: 'Full Stack Developer',
+      athanCompany: 'Athan Tecnologia',
+      athanPeriod: '2023 - 2025',
+      athanDescription1:
+        'Optimized internal processes and automated workflows, reducing operation time by more than 40%.',
+      athanDescription2:
+        'Implemented complex integrations with Twilio, AWS SES and internal systems, accelerating fault detection and response.',
+      athanDescription3:
+        'Developed scalable solutions, serverless APIs and improvements in multichannel service platforms.',
+      athanDescription4:
+        'Worked on CRM evolution, improving UX, creating new features and producing strategic technical documentation.'
+    },
+    freelancer: {
+      freelancerPosition: 'Full Stack Developer',
+      freelancerCompany: 'Freelancer',
+      freelancerPeriod: '2024 - 2025',
+      freelancerDescription:
+        'Complete development of the Better Health project: a full-stack application that optimizes health clinic management. Backend architecture with Node.js and Express, and frontend with Next.js, resulting in an efficient system for appointment scheduling.'
+    },
+    volunteer: {
+      volunteerPosition: 'Front end Developer',
+      volunteerCompany: 'Cristal TV',
+      volunteerPeriod: '2023',
+      volunteerDescription:
+        'Acting as a volunteer frontend developer for Cristal TV, delivering solutions with Next.js, TypeScript and SCSS that ensured high performance and usability'
+    }
+  },
+
   skills: {
     skillsTitle: 'Technical Skills',
     developmentTitle: 'Development',
