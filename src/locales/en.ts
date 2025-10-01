@@ -93,6 +93,18 @@ const en = {
     technicalDegree: 'Technical in Systems Development',
     senai: 'SENAI',
     technicalPeriod: '07/2021 - 12/2022'
+  },
+  contact: {
+    contactTitle: 'Send me a message!',
+    contactDescription:
+      'Got a question or proposal, or just want to say hello? Go ahead.',
+    nameField: 'Name',
+    namePlaceholder: 'Enter your name',
+    emailField: 'Email',
+    emailPlaceholder: 'Enter your email',
+    messageField: 'Message',
+    messagePlaceholder: 'Enter your message',
+    sendButton: 'Send'
   }
 }
 

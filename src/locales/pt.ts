@@ -93,7 +93,18 @@ const pt = {
     technicalDegree: 'Técnico em Desenvolvimento de Sistemas',
     senai: 'SENAI',
     technicalPeriod: '07/2021 - 12/2022'
+  },
+  contact: {
+    contactTitle: 'Me mande uma mensagem!',
+    contactDescription:
+      'Tem alguma pergunta ou proposta, ou apenas quer dizer oi? Vá em frente.',
+    nameField: 'Nome',
+    namePlaceholder: 'Digite seu nome',
+    emailField: 'Email',
+    emailPlaceholder: 'Digite seu email',
+    messageField: 'Mensagem',
+    messagePlaceholder: 'Digite sua mensagem',
+    sendButton: 'Enviar'
   }
 }
-
 export default pt

@@ -1,6 +1,7 @@
 'use client'
 
 import { AboutSection } from '@/components/about-section'
+import { ContactSection } from '@/components/contact-section'
 import { ExperienceSection } from '@/components/experience-section'
 import { HeroSection } from '@/components/hero-section'
 import { Navigation } from '@/components/navigation'
@@ -18,6 +19,7 @@ export default function Home() {
       <AboutSection language={language}></AboutSection>
       <ExperienceSection language={language} />
       <SkillsSection language={language} />
+      <ContactSection language={language} />
     </main>
   )
 }
