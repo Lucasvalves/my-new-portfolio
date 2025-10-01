@@ -107,6 +107,10 @@ const en = {
     sendButton: 'Send',
     successSendMessage: 'Message sent successfully!',
     errorSendMessage: 'Please check the fields before submitting!'
+  },
+  footer: {
+    madeWith: 'Made with',
+    lotsOfCoffee: 'and lots of coffee'
   }
 }
 

@@ -107,6 +107,10 @@ const pt = {
     sendButton: 'Enviar',
     successSendMessage: 'Mensagem enviada com sucesso!',
     errorSendMessage: 'Por favor, verifique os campos antes de enviar!'
+  },
+  footer: {
+    madeWith: 'Feito com',
+    lotsOfCoffee: 'e muito'
   }
 }
 export default pt
