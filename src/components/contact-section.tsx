@@ -2,15 +2,7 @@
 
 import { useState, useEffect, useRef, FormEvent } from 'react'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import {
-  Mail,
-  MessageCircle,
-  Send,
-  MapPin,
-  Phone,
-  MoveRight
-} from 'lucide-react'
+import { MoveRight } from 'lucide-react'
 import type { Language } from '@/locales'
 import { getTranslation } from '@/locales'
 import emailjs from '@emailjs/browser'
@@ -120,14 +112,14 @@ export function ContactSection({ language }: ContactSectionProps) {
 
       <div className="relative z-10 mx-auto max-w-7xl">
         <div
-          className={`text-center lg:col-span-1 ${isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}
+          className={`mb-14 flex flex-col items-center lg:col-span-1 ${isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}
         >
           <h2 className="mb-6 text-3xl font-bold text-white lg:text-4xl">
             <span className="text-white">
               {translation.contact.contactTitle}
             </span>
           </h2>
-          <p className="mb-8 leading-relaxed text-gray-400">
+          <p className="w-2/5 text-center text-lg leading-relaxed text-gray-400">
             {translation.contact.contactDescription}
           </p>
         </div>
@@ -136,8 +128,8 @@ export function ContactSection({ language }: ContactSectionProps) {
           ref={formRef}
           onSubmit={handleSubmit}
         >
-          <div className="flex w-1/2 flex-col gap-12">
-            <div className="flex flex-row gap-10">
+          <div className="flex w-3/5 flex-col gap-12">
+            <div className="flex flex-row gap-14">
               <div className="w-1/2">
                 <label htmlFor="name" className="text-white">
                   {translation.contact.nameField}
@@ -147,7 +139,7 @@ export function ContactSection({ language }: ContactSectionProps) {
                   name="fullName"
                   id="fullName"
                   placeholder={translation.contact.namePlaceholder}
-                  className="w-full border-b-1 border-gray-300 p-1 text-gray-400 focus:outline-none"
+                  className="w-full border-b-1 border-gray-300 p-1 text-gray-400 placeholder:text-gray-400 focus:outline-none"
                 />
               </div>
               <div className="w-1/2">
@@ -159,7 +151,7 @@ export function ContactSection({ language }: ContactSectionProps) {
                   type="email"
                   name="email"
                   placeholder={translation.contact.emailPlaceholder}
-                  className="w-full border-b-1 border-gray-300 p-1 text-gray-400 focus:outline-none"
+                  className="w-full border-b-1 border-gray-300 p-1 text-gray-400 placeholder:text-gray-400 focus:outline-none"
                 />
               </div>
             </div>
@@ -172,7 +164,7 @@ export function ContactSection({ language }: ContactSectionProps) {
                 id="message"
                 required
                 placeholder={translation.contact.messagePlaceholder}
-                className="w-full border-b-1 border-gray-300 p-1 text-gray-400 focus:outline-none"
+                className="placeholder:text-gray-400 w-full border-b-1 border-gray-300 p-1 text-gray-400 focus:outline-none"
               />
             </div>
             <div className="flex h-fit w-full">
