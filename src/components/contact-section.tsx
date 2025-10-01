@@ -14,7 +14,7 @@ import {
 import type { Language } from '@/locales'
 import { getTranslation } from '@/locales'
 import emailjs from '@emailjs/browser'
-
+import { LoadingSpinner } from '@/components/ui/loading-spinner'
 interface ContactSectionProps {
   language: Language
 }
@@ -22,6 +22,7 @@ interface ContactSectionProps {
 export function ContactSection({ language }: ContactSectionProps) {
   const translation = getTranslation(language)
   const [isVisible, setIsVisible] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   const sectionRef = useRef<HTMLElement>(null)
 
@@ -31,6 +32,7 @@ export function ContactSection({ language }: ContactSectionProps) {
     event.preventDefault()
 
     if (!formRef.current) return
+    setLoading(true)
 
     emailjs
       .sendForm(
@@ -40,8 +42,11 @@ export function ContactSection({ language }: ContactSectionProps) {
         'BxT5RBo0A4uwq3_HR'
       )
       .then(
-        () => {},
+        () => {
+          setLoading(false)
+        },
         (err: ErrorEvent) => {
+          setLoading(false)
           console.log(err)
         }
       )
@@ -139,9 +144,10 @@ export function ContactSection({ language }: ContactSectionProps) {
               />
             </div>
             <div className="flex h-fit w-full">
-              <Button className="hover-lift hover:border-brand hover:bg-brand m-auto rounded-none border-1 border-gray-300 bg-transparent text-white transition-all duration-300">
+              <Button className="hover-lift hover:border-brand w-1/5 hover:bg-brand m-auto rounded-none border-1 border-gray-300 bg-transparent text-white transition-all duration-300">
+                {loading && <LoadingSpinner />}
                 {translation.contact.sendButton}
-                <MoveRight className="mr-2 h-4 w-4" />
+                <MoveRight className=" h-4 w-4" />
               </Button>
             </div>
           </div>
