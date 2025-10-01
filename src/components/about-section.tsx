@@ -175,7 +175,7 @@ export function AboutSection({ language }: AboutSectionProps) {
               {keyStrengths.map((value, index) => (
                 <div
                   key={index}
-                  className="animate-slide-up hover:text-brand differentials-border text-background cursor-default border-0 p-3 text-base font-semibold transition-all duration-300"
+                  className="animate-slide-up hover:text-brand key-strengths-border text-background cursor-default border-0 p-3 text-base font-semibold transition-all duration-300"
                   style={{ animationDelay: `${0.8 + index * 0.2}s` }}
                 >
                   <div className="flex gap-2.5">

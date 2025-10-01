@@ -141,12 +141,12 @@
     background: #111111;
     border-radius: inherit;
   }
-  .differentials-border {
+  .key-strengths-border {
     border: 1px solid transparent;
     background: #21212124;
     border-radius: 10px;
   }
-  .differentials-border:hover {
+  .key-strengths-border:hover {
     border: solid 1px #0d52ff;
   }
 
