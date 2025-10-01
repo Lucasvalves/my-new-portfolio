@@ -104,7 +104,9 @@ const pt = {
     emailPlaceholder: 'Digite seu email',
     messageField: 'Mensagem',
     messagePlaceholder: 'Digite sua mensagem',
-    sendButton: 'Enviar'
+    sendButton: 'Enviar',
+    successSendMessage: 'Mensagem enviada com sucesso!',
+    errorSendMessage: 'Por favor, verifique os campos antes de enviar!'
   }
 }
 export default pt

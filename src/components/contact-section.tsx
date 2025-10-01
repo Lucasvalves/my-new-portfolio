@@ -15,9 +15,17 @@ import type { Language } from '@/locales'
 import { getTranslation } from '@/locales'
 import emailjs from '@emailjs/browser'
 import { LoadingSpinner } from '@/components/ui/loading-spinner'
+import z from 'zod'
+import { enqueueSnackbar } from 'notistack'
 interface ContactSectionProps {
   language: Language
 }
+
+const schema = z.object({
+  name: z.string().min(2, 'Nome muito curto'),
+  email: z.string().email('Email inválido'),
+  message: z.string().min(5, 'Mensagem muito curta')
+})
 
 export function ContactSection({ language }: ContactSectionProps) {
   const translation = getTranslation(language)
@@ -28,11 +36,30 @@ export function ContactSection({ language }: ContactSectionProps) {
 
   const formRef = useRef<HTMLFormElement | null>(null)
 
-  const sendEmail = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
     if (!formRef.current) return
     setLoading(true)
+
+    const formData = new FormData(formRef.current)
+    const values = {
+      name: formData.get('fullName') as string,
+      email: formData.get('email') as string,
+      message: formData.get('message') as string
+    }
+    console.log('🚀 ~ handleSubmit ~ values:', values)
+
+    const result = schema.safeParse(values)
+
+    if (!result.success) {
+      setLoading(false)
+      enqueueSnackbar(translation.contact.errorSendMessage, {
+        variant: 'error'
+      })
+
+      return
+    }
 
     emailjs
       .sendForm(
@@ -44,10 +71,15 @@ export function ContactSection({ language }: ContactSectionProps) {
       .then(
         () => {
           setLoading(false)
+          enqueueSnackbar(translation.contact.successSendMessage, {
+            variant: 'success'
+          })
+
+          formRef.current?.reset()
         },
         (err: ErrorEvent) => {
           setLoading(false)
-          console.log(err)
+          console.log(err.message)
         }
       )
   }
@@ -102,7 +134,7 @@ export function ContactSection({ language }: ContactSectionProps) {
         <form
           className={`flex justify-center lg:col-span-1 ${isVisible ? 'animate-slide-in-right' : 'opacity-0'}`}
           ref={formRef}
-          onSubmit={sendEmail}
+          onSubmit={handleSubmit}
         >
           <div className="flex w-1/2 flex-col gap-12">
             <div className="flex flex-row gap-10">
@@ -144,10 +176,10 @@ export function ContactSection({ language }: ContactSectionProps) {
               />
             </div>
             <div className="flex h-fit w-full">
-              <Button className="hover-lift hover:border-brand w-1/5 hover:bg-brand m-auto rounded-none border-1 border-gray-300 bg-transparent text-white transition-all duration-300">
+              <Button className="hover-lift hover:border-brand hover:bg-brand m-auto w-1/5 rounded-none border-1 border-gray-400 bg-transparent text-white transition-all duration-300">
                 {loading && <LoadingSpinner />}
                 {translation.contact.sendButton}
-                <MoveRight className=" h-4 w-4" />
+                <MoveRight className="h-4 w-4" />
               </Button>
             </div>
           </div>

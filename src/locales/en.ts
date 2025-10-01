@@ -104,7 +104,9 @@ const en = {
     emailPlaceholder: 'Enter your email',
     messageField: 'Message',
     messagePlaceholder: 'Enter your message',
-    sendButton: 'Send'
+    sendButton: 'Send',
+    successSendMessage: 'Message sent successfully!',
+    errorSendMessage: 'Please check the fields before submitting!'
   }
 }
 

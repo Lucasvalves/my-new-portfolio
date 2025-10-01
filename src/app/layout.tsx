@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import './globals.css'
+import { CustomSnackbarProvider } from '@/providers/custom-snackbar-provider'
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -24,7 +25,9 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/logomarca.svg" />
       </head>
-      <body className={`${poppins.variable} antialiased`}>{children}</body>
+      <body className={`${poppins.variable} antialiased`}>
+        <CustomSnackbarProvider>{children}</CustomSnackbarProvider>
+      </body>
     </html>
   )
 }
