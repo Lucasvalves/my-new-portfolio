@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, FormEvent } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import {
@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
 import type { Language } from '@/locales'
 import { getTranslation } from '@/locales'
+import emailjs from '@emailjs/browser'
 
 interface ContactSectionProps {
   language: Language
@@ -21,7 +22,30 @@ interface ContactSectionProps {
 export function ContactSection({ language }: ContactSectionProps) {
   const translation = getTranslation(language)
   const [isVisible, setIsVisible] = useState(false)
+
   const sectionRef = useRef<HTMLElement>(null)
+
+  const formRef = useRef<HTMLFormElement | null>(null)
+
+  const sendEmail = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+
+    if (!formRef.current) return
+
+    emailjs
+      .sendForm(
+        'service_r7c3k11',
+        'template_vu60cok',
+        formRef.current,
+        'BxT5RBo0A4uwq3_HR'
+      )
+      .then(
+        () => {},
+        (err: ErrorEvent) => {
+          console.log(err)
+        }
+      )
+  }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -70,8 +94,11 @@ export function ContactSection({ language }: ContactSectionProps) {
             {translation.contact.contactDescription}
           </p>
         </div>
-        <div className={`flex justify-center lg:col-span-1 ${isVisible ? 'animate-slide-in-right' : 'opacity-0'}`}>
-
+        <form
+          className={`flex justify-center lg:col-span-1 ${isVisible ? 'animate-slide-in-right' : 'opacity-0'}`}
+          ref={formRef}
+          onSubmit={sendEmail}
+        >
           <div className="flex w-1/2 flex-col gap-12">
             <div className="flex flex-row gap-10">
               <div className="w-1/2">
@@ -80,6 +107,8 @@ export function ContactSection({ language }: ContactSectionProps) {
                 </label>
                 <input
                   type="text"
+                  name="fullName"
+                  id="fullName"
                   placeholder={translation.contact.namePlaceholder}
                   className="w-full border-b-1 border-gray-300 p-1 text-gray-400 focus:outline-none"
                 />
@@ -89,7 +118,9 @@ export function ContactSection({ language }: ContactSectionProps) {
                   {translation.contact.emailField}
                 </label>
                 <input
-                  type="text"
+                  id="email"
+                  type="email"
+                  name="email"
                   placeholder={translation.contact.emailPlaceholder}
                   className="w-full border-b-1 border-gray-300 p-1 text-gray-400 focus:outline-none"
                 />
@@ -100,21 +131,21 @@ export function ContactSection({ language }: ContactSectionProps) {
                 {translation.contact.messageField}
               </label>
               <input
-                type="text"
+                name="message"
+                id="message"
+                required
                 placeholder={translation.contact.messagePlaceholder}
                 className="w-full border-b-1 border-gray-300 p-1 text-gray-400 focus:outline-none"
               />
             </div>
-            <div className="w-full h-fit flex">
-              <Button
-                className="hover-lift hover:border-brand hover:bg-brand m-auto rounded-none border-1 border-gray-300 bg-transparent text-white transition-all duration-300"
-              >
+            <div className="flex h-fit w-full">
+              <Button className="hover-lift hover:border-brand hover:bg-brand m-auto rounded-none border-1 border-gray-300 bg-transparent text-white transition-all duration-300">
                 {translation.contact.sendButton}
                 <MoveRight className="mr-2 h-4 w-4" />
               </Button>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </section>
   )
