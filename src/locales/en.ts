@@ -99,17 +99,7 @@ const en = {
     inDevelopment: 'In development',
     completed: 'Completed',
     techLabel: 'TECHNOLOGIES USED',
-
     viewMoreProjects: 'View more projects',
-    betterHealthTitle: 'Better Health',
-    betterHealthDescription:
-      'The system aims to simplify the management of users, doctors and patients, allowing efficient appointment scheduling in health clinics.',
-    betterHealthTech: 'TECHNOLOGIES USED',
-    cristalTVTitle: 'Cristal TV',
-    miniSellerTitle: 'Mini Seller Console',
-    miniSellerDescription:
-      'Console to capture leads and convert them into opportunities. This project uses local JSON data and simulates API latency with setTimeout.',
-    drScheduleTitle: 'Dr Schedule',
 
     listProjetcs: [
       {

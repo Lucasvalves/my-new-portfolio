@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, ExternalLink, Github, MoveRight, Tag } from 'lucide-react'
+import { ExternalLink, Github, MoveRight } from 'lucide-react'
 import type { Language } from '@/locales'
 import { getTranslation } from '@/locales'
 import Link from 'next/link'
@@ -32,49 +32,6 @@ export function ProjectsSection({ language }: ProjectsSectionProps) {
 
     return () => observer.disconnect()
   }, [])
-
-  const projects = [
-    {
-      title: transiton.projects.betterHealthTitle,
-      description: transiton.projects.betterHealthDescription,
-      status: transiton.projects.inDevelopment,
-
-      statusType: 'development',
-      technologies: ['Next.js 15+', 'TypeScript', 'Node.js', 'SCSS'],
-      techLabel: transiton.projects.betterHealthTech,
-      featured: true
-    },
-    {
-      title: transiton.projects.cristalTVTitle,
-      description: 'Plataforma de streaming filmes sociais e culturais',
-      status: transiton.projects.completed,
-      statusType: 'completed',
-      technologies: ['React', 'Node.js', 'MongoDB'],
-      featured: false
-    },
-    {
-      title: transiton.projects.miniSellerTitle,
-      description: transiton.projects.miniSellerDescription,
-      status: transiton.projects.completed,
-      statusType: 'completed',
-      technologies: ['React 18+', 'TypeScript', 'TailwindCSS'],
-      featured: false
-    },
-    {
-      title: transiton.projects.drScheduleTitle,
-      description: 'Sistema de agendamento médico com pagamentos',
-      status: transiton.projects.completed,
-      statusType: 'completed',
-      technologies: [
-        'Next.js 15+',
-        'TypeScript',
-        'TailwindCSS',
-        'Stripe',
-        'Better Auth'
-      ],
-      featured: true
-    }
-  ]
 
   return (
     <section

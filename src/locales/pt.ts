@@ -100,19 +100,6 @@ const pt = {
     completed: 'Concluído',
     techLabel: 'TECNOLOGIAS UTILIZADAS',
     viewMoreProjects: 'Ver mais projetos',
-    betterHealthTitle: 'Better Health',
-
-    betterHealthDescription:
-      'O sistema visa simplificar a gestão de usuários, médicos e pacientes, permitindo o agendamento eficiente de consultas em clínicas de saúde.',
-    betterHealthTech: 'TECNOLOGIAS UTILIZADAS',
-
-    cristalTVTitle: 'Cristal TV',
-
-    miniSellerTitle: 'Mini Seller Console',
-
-    miniSellerDescription:
-      'Console para tirar leads e convertê-los em oportunidades. Este projeto utiliza dados JSON locais e simula a latência da API com setTimeout.',
-    drScheduleTitle: 'Dr Schedule',
 
     listProjetcs: [
       {
