@@ -73,7 +73,10 @@ export function Footer({ language }: FooterProps) {
           </div>
 
           <div className="animate-slide-in-right flex items-center space-x-2 text-sm text-gray-400">
-            <span>© 2025 Lucas Veloso. {translation.footer.madeWith}</span>
+            <span>
+              © {new Date().getFullYear()} Lucas Veloso.{' '}
+              {translation.footer.madeWith}
+            </span>
             <Heart className="h-4 w-4 animate-pulse text-red-500" />
             <span>{translation.footer.lotsOfCoffee} ☕</span>
           </div>
