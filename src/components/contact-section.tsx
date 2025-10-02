@@ -2,11 +2,10 @@
 
 import { useState, useEffect, useRef, FormEvent } from 'react'
 import { Button } from '@/components/ui/button'
-import { MoveRight } from 'lucide-react'
+import { LoaderCircle, MoveRight } from 'lucide-react'
 import type { Language } from '@/locales'
 import { getTranslation } from '@/locales'
 import emailjs from '@emailjs/browser'
-import { LoadingSpinner } from '@/components/ui/loading-spinner'
 import z from 'zod'
 import { enqueueSnackbar } from 'notistack'
 interface ContactSectionProps {
@@ -164,12 +163,12 @@ export function ContactSection({ language }: ContactSectionProps) {
                 id="message"
                 required
                 placeholder={translation.contact.messagePlaceholder}
-                className="placeholder:text-gray-400 w-full border-b-1 border-gray-300 p-1 text-gray-400 focus:outline-none"
+                className="w-full border-b-1 border-gray-300 p-1 text-gray-400 placeholder:text-gray-400 focus:outline-none"
               />
             </div>
             <div className="flex h-fit w-full">
               <Button className="hover-lift hover:border-brand hover:bg-brand m-auto w-1/5 rounded-none border-1 border-gray-400 bg-transparent text-white transition-all duration-300">
-                {loading && <LoadingSpinner />}
+                {loading && <LoaderCircle className="h-3 w-3 animate-spin" />}
                 {translation.contact.sendButton}
                 <MoveRight className="h-4 w-4" />
               </Button>
