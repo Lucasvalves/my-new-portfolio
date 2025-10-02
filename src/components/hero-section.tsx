@@ -111,7 +111,7 @@ export function HeroSection({ language }: HeroSectionProps) {
               rel="noopener noreferrer"
             >
               <Button
-                className="hover-lift hover:border-brand hover:bg-brand rounded-none border-2 border-gray-600 bg-transparent text-white transition-all duration-300"
+                className="hover-lift hover:border-brand hover:bg-brand rounded-none border-1 border-gray-400 bg-transparent text-white transition-all duration-300"
                 onClick={() =>
                   document
                     .getElementById('contact')
