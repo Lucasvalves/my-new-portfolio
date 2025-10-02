@@ -107,9 +107,8 @@ export function ProjectsSection({ language }: ProjectsSectionProps) {
               className={`${project.featured ? 'lg:col-span-2' : ''} ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="glass-effect hover-lift group h-full rounded-lg p-8">
+              <div className="glass-effect hover-lift group h-full rounded-lg border-0 p-8">
                 <div className="flex h-full flex-col">
-                  {/* Header do projeto */}
                   <div className="mb-6 flex items-start justify-between">
                     <h3 className="text-2xl font-semibold text-white transition-colors duration-300 group-hover:text-[#0D52FF]">
                       {project.title}
@@ -151,26 +150,36 @@ export function ProjectsSection({ language }: ProjectsSectionProps) {
                   </div>
 
                   <div className="flex items-center space-x-3 border-t border-gray-700/50 pt-4">
-                    <Link href="/">
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="text-gray-400 transition-all duration-300 hover:bg-white/10 hover:text-[#0D52FF]"
+                    {project.linkGithub && (
+                      <Link
+                        href={project.linkGithub}
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
-                        <Github className="mr-2 h-4 w-4" />
-                        Código
-                      </Button>
-                    </Link>
-                    <Link href="/">
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="text-gray-400 transition-all duration-300 hover:bg-white/10 hover:text-[#0D52FF]"
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="text-gray-400 transition-all duration-300 hover:bg-white/10 hover:text-[#0D52FF]"
+                        >
+                          <Github className="mr-1 h-4 w-4" />
+                        </Button>
+                      </Link>
+                    )}
+                    {project.linkProject && (
+                      <Link
+                        href={project.linkProject}
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        Demo
-                      </Button>
-                    </Link>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="text-gray-400 transition-all duration-300 hover:bg-white/10 hover:text-[#0D52FF]"
+                        >
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                        </Button>
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>

@@ -115,17 +115,12 @@ const en = {
       {
         title: 'Better Health',
         description:
-          'O sistema visa simplificar a gestão de usuários, médicos e pacientes, permitindo o agendamento eficiente de consultas em clínicas de saúde.',
+          'The system aims to simplify the management of users, doctors and patients, allowing efficient appointment scheduling in health clinics.',
         status: 'In development',
         technologies: ['Next.js 15+', 'TypeScript', 'Node.js', 'SCSS'],
+        linkGithub: 'https://github.com/Lucasvalves/better_health',
+        linkProject: '',
         featured: true
-      },
-      {
-        title: 'Cristal TV',
-        description: 'Social and cultural film streaming platform',
-        status: 'completed',
-        technologies: ['React', 'Next.js', 'TypScript, SCSS'],
-        featured: false
       },
       {
         title: 'Mini Seller Console',
@@ -133,6 +128,8 @@ const en = {
           'Console to capture leads and convert them into opportunities. This project uses local JSON data and simulates API latency with setTimeout.',
         status: 'completed',
         technologies: ['React 18+', 'TypeScript', 'TailwindCSS'],
+        linkGithub: 'https://github.com/Lucasvalves/mini-seller-console',
+        linkProject: 'https://mini-seller-console-rosy.vercel.app/',
         featured: false
       },
       {
@@ -146,7 +143,16 @@ const en = {
           'Stripe',
           'Better Auth'
         ],
+        linkGithub: 'https://github.com/Lucasvalves/doctor-schedule',
+        linkProject: 'https://doctor-schedule-qy99.vercel.app/authentication',
         featured: true
+      },
+      {
+        title: 'Cristal TV',
+        description: 'Social and cultural film streaming platform',
+        status: 'completed',
+        technologies: ['React', 'Next.js', 'TypScript, SCSS'],
+        featured: false
       }
     ]
   },
