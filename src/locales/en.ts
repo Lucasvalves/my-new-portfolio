@@ -94,6 +94,62 @@ const en = {
     senai: 'SENAI',
     technicalPeriod: '07/2021 - 12/2022'
   },
+  projects: {
+    projectsTitle: 'Featured Projects',
+    inDevelopment: 'In development',
+    completed: 'Completed',
+    techLabel: 'TECHNOLOGIES USED',
+
+    viewMoreProjects: 'View more projects',
+    betterHealthTitle: 'Better Health',
+    betterHealthDescription:
+      'The system aims to simplify the management of users, doctors and patients, allowing efficient appointment scheduling in health clinics.',
+    betterHealthTech: 'TECHNOLOGIES USED',
+    cristalTVTitle: 'Cristal TV',
+    miniSellerTitle: 'Mini Seller Console',
+    miniSellerDescription:
+      'Console to capture leads and convert them into opportunities. This project uses local JSON data and simulates API latency with setTimeout.',
+    drScheduleTitle: 'Dr Schedule',
+
+    listProjetcs: [
+      {
+        title: 'Better Health',
+        description:
+          'O sistema visa simplificar a gestão de usuários, médicos e pacientes, permitindo o agendamento eficiente de consultas em clínicas de saúde.',
+        status: 'In development',
+        technologies: ['Next.js 15+', 'TypeScript', 'Node.js', 'SCSS'],
+        featured: true
+      },
+      {
+        title: 'Cristal TV',
+        description: 'Social and cultural film streaming platform',
+        status: 'completed',
+        technologies: ['React', 'Next.js', 'TypScript, SCSS'],
+        featured: false
+      },
+      {
+        title: 'Mini Seller Console',
+        description:
+          'Console to capture leads and convert them into opportunities. This project uses local JSON data and simulates API latency with setTimeout.',
+        status: 'completed',
+        technologies: ['React 18+', 'TypeScript', 'TailwindCSS'],
+        featured: false
+      },
+      {
+        title: 'Dr Schedule',
+        description: 'Medical appointment system with payments',
+        status: 'completed',
+        technologies: [
+          'Next.js 15+',
+          'TypeScript',
+          'TailwindCSS',
+          'Stripe',
+          'Better Auth'
+        ],
+        featured: true
+      }
+    ]
+  },
   contact: {
     contactTitle: 'Send me a message!',
     contactDescription:

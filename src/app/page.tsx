@@ -6,6 +6,7 @@ import { ExperienceSection } from '@/components/experience-section'
 import { Footer } from '@/components/footer'
 import { HeroSection } from '@/components/hero-section'
 import { Navigation } from '@/components/navigation'
+import { ProjectsSection } from '@/components/projects-section'
 import { SkillsSection } from '@/components/skills-section'
 import { Language } from '@/locales'
 import { useState } from 'react'
@@ -20,6 +21,7 @@ export default function Home() {
       <AboutSection language={language}></AboutSection>
       <ExperienceSection language={language} />
       <SkillsSection language={language} />
+      <ProjectsSection language={language} />
       <ContactSection language={language} />
       <Footer language={language} />
     </main>
