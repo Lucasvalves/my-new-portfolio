@@ -31,35 +31,6 @@ export function ExperienceSection({ language }: ExperienceSectionProps) {
     return () => observer.disconnect()
   }, [])
 
-  const experiences = [
-    {
-      position: translation.experience.athan.athanPosition,
-      company: translation.experience.athan.athanCompany,
-      period: translation.experience.athan.athanPeriod,
-      descriptions: [
-        translation.experience.athan.athanDescription1,
-        translation.experience.athan.athanDescription2,
-        translation.experience.athan.athanDescription3,
-        translation.experience.athan.athanDescription4
-      ],
-      type: 'full-time'
-    },
-    {
-      position: translation.experience.freelancer.freelancerPosition,
-      company: translation.experience.freelancer.freelancerCompany,
-      period: translation.experience.freelancer.freelancerPeriod,
-      descriptions: [translation.experience.freelancer.freelancerDescription],
-      type: 'freelance'
-    },
-    {
-      position: translation.experience.volunteer.volunteerPosition,
-      company: translation.experience.volunteer.volunteerCompany,
-      period: translation.experience.volunteer.volunteerPeriod,
-      descriptions: [translation.experience.volunteer.volunteerDescription],
-      type: 'volunteer'
-    }
-  ]
-
   return (
     <section
       ref={sectionRef}
@@ -86,7 +57,7 @@ export function ExperienceSection({ language }: ExperienceSectionProps) {
           <div className="absolute top-0 bottom-0 left-8 w-0.5 bg-gradient-to-b from-[#0D52FF] via-[#0D52FF]/50 to-transparent"></div>
 
           <div className="space-y-16">
-            {experiences.map((exp, index) => (
+            {translation.experience.listExperience.map((exp, index) => (
               <div
                 key={index}
                 className={`relative pl-20 ${isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}
@@ -115,31 +86,28 @@ export function ExperienceSection({ language }: ExperienceSectionProps) {
 
                     <div
                       className={`rounded-full px-3 py-1 text-sm font-medium ${
-                        exp.type === 'full-time'
+                        exp.type === 'full-time' || exp.type === 'Full-time'
                           ? 'bg-[#0D52FF]/20 text-[#0D52FF]'
-                          : exp.type === 'freelance'
+                          : exp.type === 'freelance' ||
+                              exp.type === 'Freelancer'
                             ? 'bg-green-500/20 text-green-400'
                             : 'bg-purple-500/20 text-purple-400'
                       }`}
                     >
-                      {exp.type === 'full-time'
-                        ? 'Full-time'
-                        : exp.type === 'freelance'
-                          ? 'Freelancer'
-                          : 'Voluntário'}
+                      {exp.type}
                     </div>
                   </div>
 
-                  <div className="space-y-4 text-gray-400">
+                  <ul className="ml-6 space-y-4 text-gray-400">
                     {exp.descriptions.map((desc, descIndex) => (
-                      <p
+                      <li
                         key={descIndex}
                         className="leading-relaxed transition-colors duration-300 group-hover:text-gray-200"
                       >
                         {desc}
-                      </p>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               </div>
             ))}

@@ -51,33 +51,38 @@ const pt = {
   },
   experience: {
     experienceTitle: 'Experiência',
-    athan: {
-      athanPosition: 'Desenvolvedor Full Stack',
-      athanCompany: 'Athan Tecnologia',
-      athanPeriod: '2023 - 2025',
-      athanDescription1:
-        'Otimizei processos internos e automatizei fluxos, reduzindo em mais de 40% o tempo de operação.',
-      athanDescription2:
-        'Implementei integrações complexas com Twilio, AWS SES e sistemas internos, acelerando a detecção e resposta a falhas.',
-      athanDescription3:
-        'Desenvolvi soluções escaláveis, APIs serverless e melhorias em plataformas de atendimento multicanal.',
-      athanDescription4:
-        'Atuei na evolução de CRMs, aprimorando UX, criando novas features e produzindo documentações técnicas estratégicas.'
-    },
-    freelancer: {
-      freelancerPosition: 'Desenvolvedor Full Stack',
-      freelancerCompany: 'Freelancer',
-      freelancerPeriod: '2024 - 2025',
-      freelancerDescription:
-        'Desenvolvimento completo do projeto Better Health: uma aplicação full-stack que otimiza o gerenciamento de clínicas de saúde. Arquitetura do backend com Node.js e Express, e do frontend com Next.js, resultando em um sistema eficiente para agendamento de consultas.'
-    },
-    volunteer: {
-      volunteerPosition: 'Desenvolvedor Front end',
-      volunteerCompany: 'Cristal TV',
-      volunteerPeriod: '2023',
-      volunteerDescription:
-        'Atuação como desenvolvedor frontend voluntário para a Cristal TV, entregando soluções com Next.js, TypeScript e SCSS que garantiram alta performance e usabilidade'
-    }
+    listExperience: [
+      {
+        position: 'Desenvolvedor Full Stack',
+        company: 'Athan Tecnologia',
+        period: '2023 - 2025',
+        descriptions: [
+          'Otimizei processos internos e automatizei fluxos, reduzindo em mais de 40% o tempo de operação.',
+          'Implementei integrações complexas com Twilio, AWS SES e sistemas internos, acelerando a detecção e resposta a falhas.',
+          'Desenvolvi soluções escaláveis, APIs serverless e melhorias em plataformas de atendimento multicanal.',
+          'Atuei na evolução de CRMs, aprimorando UX, criando novas features e produzindo documentações técnicas estratégicas.'
+        ],
+        type: 'Full-time'
+      },
+      {
+        position: 'Desenvolvedor Full Stack',
+        company: 'Freelancer',
+        period: '2024 - 2025',
+        descriptions: [
+          'Desenvolvimento completo do projeto Better Health: uma aplicação full-stack que otimiza o gerenciamento de clínicas de saúde. Arquitetura do backend com Node.js e Express, e do frontend com Next.js, resultando em um sistema eficiente para agendamento de consultas.'
+        ],
+        type: 'Freelancer'
+      },
+      {
+        position: 'Desenvolvedor Front end',
+        company: 'Cristal TV',
+        period: '2023',
+        descriptions: [
+          'Atuação como desenvolvedor frontend voluntário para a Cristal TV, entregando soluções com Next.js, TypeScript e SCSS que garantiram alta performance e usabilidade.'
+        ],
+        type: 'Voluntário'
+      }
+    ]
   },
   skills: {
     skillsTitle: 'Competências Técnicas',
@@ -109,7 +114,7 @@ const pt = {
         status: 'Em desenvolvimento',
         technologies: ['Next.js 15+', 'TypeScript', 'Node.js', 'SCSS'],
         linkGithub: 'https://github.com/Lucasvalves/better_health',
-        linkProject: '',
+        linkProject: ''
       },
       {
         title: 'Mini Seller Console',
@@ -118,11 +123,11 @@ const pt = {
         status: 'Concluido',
         technologies: ['React 18+', 'TypeScript', 'TailwindCSS'],
         linkGithub: 'https://github.com/Lucasvalves/mini-seller-console',
-        linkProject: 'https://mini-seller-console-rosy.vercel.app/',
+        linkProject: 'https://mini-seller-console-rosy.vercel.app/'
       },
       {
         title: 'Dr Schedule',
-        description: 'Sistema de agendamento médico com pagamentos',
+        description: 'Sistema de agendamento médico com pagamentos.',
         status: 'Concluido',
         technologies: [
           'Next.js 15+',
@@ -132,13 +137,13 @@ const pt = {
           'Better Auth'
         ],
         linkGithub: 'https://github.com/Lucasvalves/doctor-schedule',
-        linkProject: 'https://doctor-schedule-qy99.vercel.app/authentication',
+        linkProject: 'https://doctor-schedule-qy99.vercel.app/authentication'
       },
       {
         title: 'Cristal TV',
         description: 'Plataforma de streaming filmes sociais e culturais',
         status: 'Concluido',
-        technologies: ['React', 'Next.js', 'TypScript, SCSS'],
+        technologies: ['React', 'Next.js', 'TypScript, SCSS']
       }
     ]
   },
