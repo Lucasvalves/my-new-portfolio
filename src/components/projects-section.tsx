@@ -61,7 +61,7 @@ export function ProjectsSection({ language }: ProjectsSectionProps) {
           {transiton.projects.listProjetcs.map((project, index) => (
             <div
               key={index}
-              className={`${project.featured ? 'lg:col-span-2' : ''} ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}
+              className={`${isVisible ? 'animate-slide-up' : 'opacity-0'}`}
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="glass-effect hover-lift group h-full rounded-lg border-0 p-8">
@@ -88,7 +88,6 @@ export function ProjectsSection({ language }: ProjectsSectionProps) {
 
                   <div className="mb-6 space-y-3">
                     <div className="flex items-center space-x-2 text-sm font-medium text-gray-400">
-                      {/* <Tag className="h-4 w-4" /> */}
                       <span>{transiton.projects.techLabel}</span>
                     </div>
                     <div className="flex flex-wrap gap-2">
@@ -114,11 +113,10 @@ export function ProjectsSection({ language }: ProjectsSectionProps) {
                         rel="noopener noreferrer"
                       >
                         <Button
-                          variant="ghost"
                           size="sm"
-                          className="text-gray-400 transition-all duration-300 hover:bg-white/10 hover:text-[#0D52FF]"
+                          className="bg-transparent text-gray-400 transition-all duration-300 hover:bg-[#000000] hover:text-[#0D52FF]"
                         >
-                          <Github className="mr-1 h-4 w-4" />
+                          <Github className="h-4 w-4" />
                         </Button>
                       </Link>
                     )}
@@ -129,11 +127,10 @@ export function ProjectsSection({ language }: ProjectsSectionProps) {
                         rel="noopener noreferrer"
                       >
                         <Button
-                          variant="ghost"
                           size="sm"
-                          className="text-gray-400 transition-all duration-300 hover:bg-white/10 hover:text-[#0D52FF]"
+                          className="bg-transparent text-gray-400 transition-all duration-300 hover:bg-[#000000] hover:text-[#0D52FF]"
                         >
-                          <ExternalLink className="mr-2 h-4 w-4" />
+                          <ExternalLink className="h-4 w-4" />
                         </Button>
                       </Link>
                     )}

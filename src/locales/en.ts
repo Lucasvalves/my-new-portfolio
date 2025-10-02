@@ -110,7 +110,6 @@ const en = {
         technologies: ['Next.js 15+', 'TypeScript', 'Node.js', 'SCSS'],
         linkGithub: 'https://github.com/Lucasvalves/better_health',
         linkProject: '',
-        featured: true
       },
       {
         title: 'Mini Seller Console',
@@ -120,7 +119,6 @@ const en = {
         technologies: ['React 18+', 'TypeScript', 'TailwindCSS'],
         linkGithub: 'https://github.com/Lucasvalves/mini-seller-console',
         linkProject: 'https://mini-seller-console-rosy.vercel.app/',
-        featured: false
       },
       {
         title: 'Dr Schedule',
@@ -135,7 +133,6 @@ const en = {
         ],
         linkGithub: 'https://github.com/Lucasvalves/doctor-schedule',
         linkProject: 'https://doctor-schedule-qy99.vercel.app/authentication',
-        featured: true
       },
       {
         title: 'Cristal TV',
