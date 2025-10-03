@@ -112,14 +112,6 @@
     animation: pulseGlow 2s ease-in-out infinite;
   }
 
-  .animate-typing {
-    animation:
-      typing 3.5s steps(40, end),
-      blink-caret 0.75s step-end infinite;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid #0d52ff;
-  }
 
   .glass-effect {
     background: rgba(17, 17, 17, 0.8);
@@ -268,25 +260,6 @@
   }
   50% {
     box-shadow: 0 0 40px rgba(13, 82, 255, 0.8);
-  }
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #0d52ff;
   }
 }
 

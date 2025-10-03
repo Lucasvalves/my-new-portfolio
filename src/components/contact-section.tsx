@@ -96,41 +96,41 @@ export function ContactSection({ language }: ContactSectionProps) {
     <section
       ref={sectionRef}
       id="contact"
-      className="section-darker relative overflow-hidden px-6 py-20 text-white"
+      className="section-darker relative overflow-hidden px-4 py-20 text-white sm:px-6 lg:px-8"
     >
       <div className="absolute inset-0 overflow-hidden">
         <div
           className="animate-float absolute top-40 right-20 h-72 w-72 rounded-full bg-[#0D52FF]/5 blur-3xl"
           style={{ animationDelay: '1s' }}
-        ></div>
+        />
         <div
           className="animate-float absolute bottom-20 left-40 h-56 w-56 rounded-full bg-[#0D52FF]/5 blur-3xl"
           style={{ animationDelay: '3.5s' }}
-        ></div>
+        />
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl">
         <div
-          className={`mb-14 flex flex-col items-center lg:col-span-1 ${isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}
+          className={`mb-10 flex flex-col items-center text-center ${isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}
         >
-          <h2 className="mb-6 text-3xl font-bold text-white lg:text-4xl">
-            <span className="text-white">
-              {translation.contact.contactTitle}
-            </span>
+          <h2 className="mb-4 text-2xl font-bold text-white sm:text-3xl lg:text-4xl">
+            {translation.contact.contactTitle}
           </h2>
-          <p className="w-2/5 text-center text-lg leading-relaxed text-gray-400">
+          <p className="max-w-xl text-base leading-relaxed text-gray-400 sm:text-lg">
             {translation.contact.contactDescription}
           </p>
         </div>
+
         <form
-          className={`flex justify-center lg:col-span-1 ${isVisible ? 'animate-slide-in-right' : 'opacity-0'}`}
+          className={`mx-auto w-full max-w-2xl ${isVisible ? 'animate-slide-in-right' : 'opacity-0'}`}
           ref={formRef}
           onSubmit={handleSubmit}
         >
-          <div className="flex w-3/5 flex-col gap-12">
-            <div className="flex flex-row gap-14">
-              <div className="w-1/2">
-                <label htmlFor="name" className="text-white">
+          <div className="flex flex-col gap-8">
+            {/* Linha Nome + Email */}
+            <div className="flex flex-col gap-6 sm:flex-row">
+              <div className="w-full sm:w-1/2">
+                <label htmlFor="fullName" className="text-white">
                   {translation.contact.nameField}
                 </label>
                 <input
@@ -138,10 +138,10 @@ export function ContactSection({ language }: ContactSectionProps) {
                   name="fullName"
                   id="fullName"
                   placeholder={translation.contact.namePlaceholder}
-                  className="w-full border-b-1 border-gray-300 p-1 text-gray-400 placeholder:text-gray-400 focus:outline-none"
+                  className="w-full border-b border-gray-300 p-2 text-gray-400 placeholder:text-gray-400 focus:outline-none"
                 />
               </div>
-              <div className="w-1/2">
+              <div className="w-full sm:w-1/2">
                 <label htmlFor="email" className="text-white">
                   {translation.contact.emailField}
                 </label>
@@ -150,27 +150,35 @@ export function ContactSection({ language }: ContactSectionProps) {
                   type="email"
                   name="email"
                   placeholder={translation.contact.emailPlaceholder}
-                  className="w-full border-b-1 border-gray-300 p-1 text-gray-400 placeholder:text-gray-400 focus:outline-none"
+                  className="w-full border-b border-gray-300 p-2 text-gray-400 placeholder:text-gray-400 focus:outline-none"
                 />
               </div>
             </div>
+
             <div className="w-full">
               <label htmlFor="message" className="text-white">
                 {translation.contact.messageField}
               </label>
-              <input
+              <textarea
                 name="message"
                 id="message"
                 required
+                rows={4}
                 placeholder={translation.contact.messagePlaceholder}
-                className="w-full border-b-1 border-gray-300 p-1 text-gray-400 placeholder:text-gray-400 focus:outline-none"
+                className="w-full resize-none border-b border-gray-300 p-2 text-gray-400 placeholder:text-gray-400 focus:outline-none"
               />
             </div>
-            <div className="flex h-fit w-full">
-              <Button className="hover-lift hover:border-brand hover:bg-brand m-auto w-1/5 rounded-none border-1 border-gray-400 bg-transparent text-white transition-all duration-300">
-                {loading && <LoaderCircle className="h-3 w-3 animate-spin" />}
+
+            <div
+              className={`flex justify-center ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}
+              style={{ animationDelay: '1s' }}
+            >
+              <Button className="hover-lift animabe-pulse-glow min-w-[180px] rounded-none border border-gray-400 bg-transparent px-8 py-3 text-base text-white transition-all duration-300 hover:border-[#0D52FF] hover:bg-[#0D52FF] sm:w-auto">
+                {loading && (
+                  <LoaderCircle className="mr-2 h-4 w-4 animate-spin" />
+                )}
                 {translation.contact.sendButton}
-                <MoveRight className="h-4 w-4" />
+                <MoveRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
             </div>
           </div>

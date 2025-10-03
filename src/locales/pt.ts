@@ -31,7 +31,7 @@ const pt = {
     yearsExperienceLabel: 'Anos de experiência',
     projectsDelivered: '12+',
     projectsDeliveredLabel: 'Projetos entregues',
-    keyStrengths: 'Pontos Fortes',
+    keyStrengthsTitle: 'Pontos Fortes',
     performanceValue: 'Alta Performance',
     descriptionPerformanceValue:
       'Foco em eficiência e otimização contínua para garantir experiências rápidas, fluidas e escaláveis.',

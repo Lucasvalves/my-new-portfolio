@@ -1,3 +1,5 @@
+import { title } from 'node:process'
+
 const en = {
   navigation: {
     about: 'About',
@@ -31,7 +33,7 @@ const en = {
     yearsExperienceLabel: 'Years of experience',
     projectsDelivered: '12+',
     projectsDeliveredLabel: 'Projects delivered',
-    keyStrengths: 'Key Strengths',
+    keyStrengthsTitle: 'Key Strengths',
     performanceValue: 'High Performance',
     descriptionPerformanceValue:
       'Focused on efficiency and continuous optimization to deliver fast, smooth, and scalable experiences.',

@@ -93,13 +93,13 @@ export function Navigation({ language, onLanguageChange }: NavigationProps) {
       </nav>
 
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 md:hidden">
+        <div className="fixed inset-0 z-40 md:hidden bg-blue-900">
           <div
             className="fixed inset-0 bg-black/80 backdrop-blur-sm"
             onClick={() => setIsMobileMenuOpen(false)}
           />
-          <div className="glass-effect animate-slide-in-right fixed top-0 right-0 h-full w-80 p-6">
-            <div className="mt-20 flex flex-col space-y-6">
+          <div className="glass-effect animate-slide-in-right fixed top-0 right-0 h-full w-full p-6  ">
+            <div className="mt-20 flex flex-col space-y-6 ">
               {Object.entries(translation.navigation).map(
                 ([key, item], index) => (
                   <button

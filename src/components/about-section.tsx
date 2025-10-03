@@ -170,7 +170,7 @@ export function AboutSection({ language }: AboutSectionProps) {
           >
             <div className="space-y-6">
               <h3 className="text-xl font-semibold text-[#E9EFF4]">
-                {translation.about.keyStrengths}
+                {translation.about.keyStrengthsTitle}
               </h3>
               {keyStrengths.map((value, index) => (
                 <div
@@ -179,7 +179,7 @@ export function AboutSection({ language }: AboutSectionProps) {
                   style={{ animationDelay: `${0.8 + index * 0.2}s` }}
                 >
                   <div className="flex gap-2.5">
-                    <span className="black-border zoom-in text-brand z10 relative mb-7 cursor-default rounded-md p-2 text-sm font-normal">
+                    <span className="black-border zoom-in text-brand z10 relative h-7.5 cursor-default rounded-md p-2 text-sm font-normal">
                       <value.icon className="relative z-10" size={15} />
                     </span>
                     <span className="relative">
