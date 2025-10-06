@@ -117,7 +117,7 @@ const en = {
         status: 'In development',
         technologies: ['Next.js 15+', 'TypeScript', 'Node.js', 'SCSS'],
         linkGithub: 'https://github.com/Lucasvalves/better_health',
-        linkProject: ''
+        linkProject: 'https://better-health-sigma.vercel.app/authentication'
       },
       {
         title: 'Mini Seller Console',
