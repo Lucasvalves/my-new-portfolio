@@ -143,12 +143,22 @@ export function HeroSection({ language }: HeroSectionProps) {
             </span>
             <div className="flex items-center space-x-4">
               {[
-                { icon: Mail, href: 'mailto:lucasvelosoalves@outlook.com' },
+                {
+                  icon: Mail,
+                  href: 'mailto:lucasvelosoalves@outlook.com?subject=Olá...',
+                  label: 'Email'
+                },
+
                 {
                   icon: Linkedin,
-                  href: 'https://www.linkedin.com/in/lucasvelosoalves/'
+                  href: 'https://www.linkedin.com/in/lucasvelosoalves/',
+                  label: 'LinkedIn'
                 },
-                { icon: Github, href: 'https://github.com/Lucasvalves' }
+                {
+                  icon: Github,
+                  href: 'https://github.com/Lucasvalves',
+                  label: 'GitHub'
+                }
               ].map(({ icon: Icon, href }, index) => (
                 <Button
                   key={index}

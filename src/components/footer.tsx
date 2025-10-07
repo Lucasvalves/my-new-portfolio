@@ -5,6 +5,7 @@ import { Github, Linkedin, Mail, Heart, ArrowUp } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import type { Language } from '@/locales'
 import { getTranslation } from '@/locales'
+import Link from 'next/link'
 
 interface FooterProps {
   language: Language
@@ -38,7 +39,7 @@ export function Footer({ language }: FooterProps) {
             {[
               {
                 icon: Mail,
-                href: 'mailto:lucasvelosoalves@outlook.com',
+                href: 'mailto:lucasvelosoalves@outlook.com?subject=Olá...',
                 label: 'Email'
               },
 
@@ -49,7 +50,7 @@ export function Footer({ language }: FooterProps) {
               },
               {
                 icon: Github,
-                href: 'mailto:lucasvelosoalves@outlook.com',
+                href: 'https://github.com/Lucasvalves',
                 label: 'GitHub'
               }
             ].map(({ icon: Icon, href, label }, index) => (
@@ -60,14 +61,14 @@ export function Footer({ language }: FooterProps) {
                 className="hover-lift animate-slide-up hover:text-brand bg-transparent text-gray-400 transition-all duration-300 hover:bg-white/10"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <a
+                <Link
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
                 >
                   <Icon className="h-5 w-5" />
-                </a>
+                </Link>
               </Button>
             ))}
           </div>

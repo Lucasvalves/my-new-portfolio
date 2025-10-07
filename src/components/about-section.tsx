@@ -111,7 +111,6 @@ export function AboutSection({ language }: AboutSectionProps) {
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl">
-        {/* <div className="grid items-center gap-16 bg-amber-200 lg:grid-cols-2"> */}
         <div className="grid items-stretch gap-16 lg:grid-cols-2">
           <div
             className={`space-y-8 ${isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}
