@@ -190,7 +190,6 @@ export function HeroSection({ language }: HeroSectionProps) {
               <div className="from-brand/20 absolute inset-0 bg-gradient-to-t to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
             </div>
 
-            {/* Floating icons with improved animations */}
             <div className="animate-pulse-glow hover-lift bg-brand absolute -top-4 -right-4 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full">
               <Code className="h-6 w-6 text-white" />
             </div>
@@ -201,7 +200,6 @@ export function HeroSection({ language }: HeroSectionProps) {
               <Monitor className="h-6 w-6 text-white" />
             </div>
 
-            {/* Decorative elements */}
             <div
               className="animate-float bg-brand/60 absolute top-1/2 -left-8 h-4 w-4 rounded-full"
               style={{ animationDelay: '2s' }}
