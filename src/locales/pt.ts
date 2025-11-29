@@ -112,9 +112,50 @@ const pt = {
         description:
           'O sistema visa simplificar a gestão de usuários, médicos e pacientes, permitindo o agendamento eficiente de consultas em clínicas de saúde.',
         status: 'Em desenvolvimento',
-        technologies: ['Next.js 15+', 'TypeScript', 'Node.js', 'SCSS'],
+        technologies: [
+          'Next.js',
+          'TypeScript',
+          'SCSS',
+          'TanStack Query',
+          'Jest',
+          'Testing Library',
+          'Node.js',
+          'Express'
+        ],
         linkGithub: 'https://github.com/Lucasvalves/better_health',
         linkProject: 'https://better-health-sigma.vercel.app/authentication'
+      },
+      {
+        title: 'Connect CRM',
+        description:
+          'Plataforma completa para organizar clientes e contatos, permitindo gerenciar informações com facilidade e visualizar relatórios claros para apoiar decisões.',
+        status: 'completed',
+        technologies: [
+          'React',
+          'TypeScript',
+          'TailwindCSS',
+          'Shadcn',
+          'Node.js',
+          'Express'
+        ],
+        linkGithub: 'https://github.com/Lucasvalves/connect-crm',
+        linkProject: 'https://connect-crm-theta.vercel.app/'
+      },
+      {
+        title: 'Dr Schedule',
+        description:
+          'Sistema completo para gestão de consultas médicas com pagamentos integrados.',
+        status: 'Concluido',
+        technologies: [
+          'React',
+          'TypeScript',
+          'TailwindCSS',
+          'Shadcn',
+          'Node.js',
+          'Express'
+        ],
+        linkGithub: 'https://github.com/Lucasvalves/doctor-schedule',
+        linkProject: 'https://doctor-schedule-qy99.vercel.app/authentication'
       },
       {
         title: 'Mini Seller Console',
@@ -124,26 +165,6 @@ const pt = {
         technologies: ['React 18+', 'TypeScript', 'TailwindCSS'],
         linkGithub: 'https://github.com/Lucasvalves/mini-seller-console',
         linkProject: 'https://mini-seller-console-rosy.vercel.app/'
-      },
-      {
-        title: 'Dr Schedule',
-        description: 'Sistema de agendamento médico com pagamentos.',
-        status: 'Concluido',
-        technologies: [
-          'Next.js 15+',
-          'TypeScript',
-          'TailwindCSS',
-          'Stripe',
-          'Better Auth'
-        ],
-        linkGithub: 'https://github.com/Lucasvalves/doctor-schedule',
-        linkProject: 'https://doctor-schedule-qy99.vercel.app/authentication'
-      },
-      {
-        title: 'Cristal TV',
-        description: 'Plataforma de streaming filmes sociais e culturais',
-        status: 'Concluido',
-        technologies: ['React', 'Next.js', 'TypScript, SCSS']
       }
     ]
   },

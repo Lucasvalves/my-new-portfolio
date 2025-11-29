@@ -115,25 +115,42 @@ const en = {
         description:
           'The system aims to simplify the management of users, doctors and patients, allowing efficient appointment scheduling in health clinics.',
         status: 'In development',
-        technologies: ['Next.js 15+', 'TypeScript', 'Node.js', 'SCSS'],
+        technologies: [
+          'Next.js',
+          'TypeScript',
+          'Node.js',
+          'SCSS',
+          'Express',
+          'TanStack Query',
+          'Jest',
+          'Testing Library'
+        ],
         linkGithub: 'https://github.com/Lucasvalves/better_health',
         linkProject: 'https://better-health-sigma.vercel.app/authentication'
       },
       {
-        title: 'Mini Seller Console',
+        title: 'Connect CRM',
         description:
-          'Console to capture leads and convert them into opportunities. This project uses local JSON data and simulates API latency with setTimeout.',
+          'A complete platform for organizing clients and contacts, allowing you to easily manage information and view clear reports to support decision-making.',
         status: 'completed',
-        technologies: ['React 18+', 'TypeScript', 'TailwindCSS'],
-        linkGithub: 'https://github.com/Lucasvalves/mini-seller-console',
-        linkProject: 'https://mini-seller-console-rosy.vercel.app/'
+        technologies: [
+          'React',
+          'TypeScript',
+          'TailwindCSS',
+          'Shadcn',
+          'Node.js',
+          'Express'
+        ],
+        linkGithub: 'https://github.com/Lucasvalves/connect-crm',
+        linkProject: 'https://connect-crm-theta.vercel.app/'
       },
       {
         title: 'Dr Schedule',
-        description: 'Medical appointment system with payments.',
+        description:
+          'Complete system for managing medical appointments with integrated payments.',
         status: 'completed',
         technologies: [
-          'Next.js 15+',
+          'React',
           'TypeScript',
           'TailwindCSS',
           'Stripe',
@@ -143,11 +160,13 @@ const en = {
         linkProject: 'https://doctor-schedule-qy99.vercel.app/authentication'
       },
       {
-        title: 'Cristal TV',
-        description: 'Social and cultural film streaming platform',
+        title: 'Mini Seller Console',
+        description:
+          'Console to capture leads and convert them into opportunities. This project uses local JSON data and simulates API latency with setTimeout.',
         status: 'completed',
-        technologies: ['React', 'Next.js', 'TypScript, SCSS'],
-        featured: false
+        technologies: ['React', 'TypeScript', 'TailwindCSS'],
+        linkGithub: 'https://github.com/Lucasvalves/mini-seller-console',
+        linkProject: 'https://mini-seller-console-rosy.vercel.app/'
       }
     ]
   },
