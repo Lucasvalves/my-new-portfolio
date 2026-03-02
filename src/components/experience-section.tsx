@@ -86,7 +86,9 @@ export function ExperienceSection({ language }: ExperienceSectionProps) {
 
                     <div
                       className={`rounded-full px-3 py-1 text-sm font-medium ${
-                        exp.type === 'full-time' || exp.type === 'Full-time'
+                        exp.type === 'full-time' ||
+                        exp.type === 'Full-time' ||
+                        exp.type === 'Tempo integral'
                           ? 'bg-[#0D52FF]/20 text-[#0D52FF]'
                           : exp.type === 'freelance' ||
                               exp.type === 'Freelancer'

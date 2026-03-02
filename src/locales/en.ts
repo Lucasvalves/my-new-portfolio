@@ -54,6 +54,19 @@ const en = {
     experienceTitle: 'Experience',
     listExperience: [
       {
+        position: 'Software Engineer',
+        company: 'Casa de Apostas',
+        period: '2025 - present',
+        descriptions: [
+          'Created automated monitoring and validation routines in a containerized (Docker) environment, strengthening application reliability and reducing operational failures.',
+          'Developed and enhanced frontend pages and features, focusing on performance, usability, and alignment with CRM strategies and promotional campaigns.',
+          'Implemented integrations between internal systems and third-party platforms, streamlining operational flows and reducing friction in the user journey.',
+          'Structured an automated process for daily consolidation of financial data, including database modeling and integration with external reports, increasing data accuracy for strategic areas.',
+          'Worked full stack on the development and evolution of betting platform solutions, contributing to secure and scalable APIs as well as continuous improvements to interfaces and user flows.'
+        ],
+        type: 'Full-time'
+      },
+      {
         position: 'Full Stack Developer',
         company: 'Athan Tecnologia',
         period: '2023 - 2025',
@@ -64,7 +77,7 @@ const en = {
           'Worked on CRM evolution, improving UX, creating new features and producing strategic technical documentation.'
         ],
 
-        type: 'full-time'
+        type: 'Full-time'
       },
       {
         position: 'Full Stack Developer',
@@ -73,7 +86,7 @@ const en = {
         descriptions: [
           'Complete development of the Better Health project: a full-stack application that optimizes health clinic management. Backend architecture with Node.js and Express, and frontend with Next.js, resulting in an efficient system for appointment scheduling.'
         ],
-        type: 'freelance'
+        type: 'Freelancer'
       },
       {
         position: 'Front end Developer',
@@ -82,7 +95,7 @@ const en = {
         descriptions: [
           'Acting as a volunteer frontend developer for Cristal TV, delivering solutions with Next.js, TypeScript and SCSS that ensured high performance and usability.'
         ],
-        type: 'volunteer'
+        type: 'Volunteer'
       }
     ]
   },

@@ -53,6 +53,18 @@ const pt = {
     experienceTitle: 'Experiência',
     listExperience: [
       {
+        position: 'Engenheiro de Software',
+        company: 'Casa de Apostas',
+        period: '2025 - o momento',
+        descriptions: [
+          'Criação de rotinas de monitoramento e validação automatizadas em ambiente containerizado (Docker), fortalecendo a confiabilidade da aplicação e reduzindo falhas operacionais.',
+          'Implementação de integrações entre sistemas internos e plataformas terceiras, simplificando fluxos operacionais e reduzindo fricções na jornada do usuário.',
+          'Estruturação de processo automatizado para consolidação diária de dados financeiros, incluindo modelagem de banco de dados e integração com relatórios externos, aumentando a precisão das informações para áreas estratégicas.',
+          'Atuação full stack no desenvolvimento e evolução de soluções para plataforma de apostas, contribuindo tanto na construção de APIs seguras e escaláveis quanto na melhoria contínua das interfaces e fluxos de usuário.'
+        ],
+        type: 'Full-time'
+      },
+      {
         position: 'Desenvolvedor Full Stack',
         company: 'Athan Tecnologia',
         period: '2023 - 2025',

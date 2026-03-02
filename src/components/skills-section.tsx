@@ -36,6 +36,7 @@ export function SkillsSection({ language }: SkillsSectionProps) {
     'Next.js 15+',
     'TypeScript',
     'JavaScript ES6+',
+    'SQL',
     'HTML5',
     'CSS 3',
     'TailwindCSS',
@@ -49,6 +50,10 @@ export function SkillsSection({ language }: SkillsSectionProps) {
     'TanStack Query',
     'CI/CD',
     'Git',
+    'GitFlow',
+    'Docker',
+    'ETL',
+    'iGaming',
     'Twilio',
     'Figma'
   ]

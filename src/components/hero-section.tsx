@@ -87,7 +87,7 @@ export function HeroSection({ language }: HeroSectionProps) {
               {translation.hero.stackTitle}
             </p>
             <div className="flex flex-wrap gap-3">
-              {['JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js'].map(
+              {['TypeScript', 'React', 'Next.js','Node.js','Python', "SQL"].map(
                 (tech, index) => (
                   <span
                     key={tech}
