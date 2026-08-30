@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lucas Veloso — Portfolio
 
-## Getting Started
+Personal portfolio showcasing my work as a full-stack developer, with a focus on modern, user-centered web experiences.
 
-First, run the development server:
+## About
+
+This site presents who I am, my professional experience, technical skills, selected projects, and a contact form so visitors can get in touch. Content is available in **Portuguese** and **English**.
+
+## Sections
+
+- **Hero** — introduction, main stack, CV download, and social links
+- **About** — background, strengths, and highlights
+- **Experience** — professional roles and freelance work
+- **Skills** — technologies and tools I work with
+- **Projects** — selected work and case studies
+- **Contact** — form powered by EmailJS
+
+## Tech stack
+
+- [Next.js](https://nextjs.org) 15 (App Router)
+- [React](https://react.dev) 19
+- [TypeScript](https://www.typescriptlang.org)
+- [Tailwind CSS](https://tailwindcss.com) 4
+- [EmailJS](https://www.emailjs.com) — contact form
+- [Zod](https://zod.dev) — form validation
+- [Radix UI](https://www.radix-ui.com) + [Lucide](https://lucide.dev) — UI primitives and icons
+
+## Getting started
+
+Install dependencies and run the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command         | Description              |
+| --------------- | ------------------------ |
+| `npm run dev`   | Start the dev server     |
+| `npm run build` | Create a production build|
+| `npm start`     | Run the production build |
+| `npm run lint`  | Run ESLint               |
 
-## Learn More
+## Author
 
-To learn more about Next.js, take a look at the following resources:
+**Lucas Veloso** — Full-stack Developer
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built with Next.js and deployed with care for performance and accessibility.
